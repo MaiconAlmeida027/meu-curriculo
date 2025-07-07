@@ -1,218 +1,282 @@
-/* style.css */
-
-/* Reset Básico para remover margens e preenchimentos padrão dos navegadores */
-body, h1, h2, p, ul, form, label, input, textarea, button {
+/* Reset Básico: Remove margens e preenchimentos padrão dos navegadores. */
+body, h1, h2, h3, p, ul, form, label, input, textarea, button, article {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura total */
+    box-sizing: border-box; 
 }
 
-/* Estilos gerais para o corpo do documento */
+/* Estilos gerais para o corpo do documento (body) */
 body {
-    font-family: Arial, sans-serif; /* Fonte padrão */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    color: #333; /* Cor de texto padrão */
-    background-color: #f4f4f4; /* Cor de fundo suave para a página */
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    background-color: #f4f4f4; 
+    padding-top: 80px; 
 }
 
-/* Cabeçalho */
+/* Configurações da Rolagem da Página (html) */
+html {
+    scroll-behavior: smooth; 
+    scroll-padding-top: 80px; 
+}
+
+/* Cabeçalho Principal */
 header {
-    background-color: #5205e0; /* Fundo escuro para o cabeçalho */
-    color: #fff; /* Texto branco */
-    padding: 1rem 0; /* Espaçamento interno superior e inferior */
-    text-align: center; /* Centraliza o texto */
+    background-color: #001F3F; /* Azul escuro profundo para o cabeçalho */
+    color: #fff; 
+    padding: 1rem 0;
+    text-align: center; 
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
 }
 
 header h1 {
-    margin-bottom: 0.5rem; /* Espaçamento abaixo do título */
+    margin-bottom: 0.5rem; 
+    font-size: 2.2rem;
 }
 
 /* Navegação */
 nav ul {
-    list-style: none; /* Remove os marcadores de lista */
-    padding: 0;
-    display: flex; /* Usa Flexbox para alinhar os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens do menu */
-    gap: 20px; /* Espaço entre os itens do menu */
+    list-style: none; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
 }
 
 nav ul li a {
-    color: #fff; /* Cor do link branco */
-    text-decoration: none; /* Remove sublinhado dos links */
-    font-weight: bold; /* Deixa o texto do link em negrito */
-    padding: 0.5rem 1rem; /* Espaçamento interno para os links */
-    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 0.5rem 1rem; 
+    transition: background-color 0.3s ease; 
 }
 
+/* Efeito de Interação (Hover) nos Links de Navegação */
 nav ul li a:hover {
-    background-color: #555; /* Cor de fundo ao passar o mouse */
-    border-radius: 5px; /* Bordas arredondadas ao passar o mouse */
+    background-color: rgba(255,255,255,0.15); 
+    border-radius: 5px; 
 }
 
 /* Área principal de conteúdo */
 main {
-    max-width: 900px; /* Largura máxima do conteúdo */
-    margin: 2rem auto; /* Centraliza o conteúdo horizontalmente com margem superior/inferior */
-    padding: 0 1rem; /* Espaçamento lateral */
+    max-width: 900px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
 }
 
-/* Estilo para cada seção */
+/* Estilo para cada Seção de Conteúdo */
 section {
-    background-color: #fff; /* Fundo branco para as seções */
-    padding: 2rem; /* Espaçamento interno */
-    margin-bottom: 2rem; /* Espaçamento entre as seções */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+    background-color: #fff; 
+    padding: 2rem; 
+    margin-bottom: 2rem; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
+/* Estilo para os títulos (h2) de cada seção */
 section h2 {
-    color: #333; /* Cor do título da seção */
-    margin-bottom: 1rem; /* Espaçamento abaixo do título da seção */
-    border-bottom: 2px solid #eee; /* Linha abaixo do título */
-    padding-bottom: 0.5rem;
+    color: #0074D9; /* Azul médio para os títulos das seções */
+    margin-bottom: 1rem; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 0.5rem; 
+    text-align: center; 
 }
 
-/* Estilo do formulário de contato */
+/* Estilos para Parágrafos (p) */
+p {
+    font-size: 1.05rem; 
+    margin-bottom: 1em; 
+}
+
+/* Estilos para imagens dentro das seções */
+section img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 15px auto; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+}
+
+/* Estilos para Itens de Portfólio (.item-do-projeto) */
+.item-do-projeto {
+    background-color: #FFFFFF; 
+    padding: 1.5rem; 
+    border-radius: 8px; 
+    border: 1px solid #E0E0E0; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+    max-width: 700px; 
+    margin: 0 auto 1.5rem auto; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Efeito de interação (hover) nos itens de projeto */
+.item-do-projeto:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12); 
+}
+
+/* Títulos dos projetos dentro dos itens de portfólio */
+.item-do-projeto h3 {
+    color: #0056b3; /* Azul escuro para o título do projeto */
+    margin-top: 0;
+    margin-bottom: 0.8rem; 
+}
+
+/* Parágrafos dentro dos itens de portfólio */
+.item-do-projeto p {
+    margin-bottom: 0.5em; 
+}
+
+/* Links dentro dos itens de portfólio */
+.item-do-projeto a {
+    color: #0074D9; /* Azul médio para o link do projeto */
+    text-decoration: none; 
+    font-weight: 600; 
+}
+
+/* Efeito de interação (hover) nos links de projeto */
+.item-do-projeto a:hover {
+    text-decoration: underline; 
+}
+
+/* Estilos para as listas de Formação (ul dentro de section) */
+section ul {
+    list-style: disc; 
+    margin-left: 20px; 
+    margin-bottom: 1em;
+}
+
+/* Estilos para os itens de lista dentro das seções */
+section ul li {
+    margin-bottom: 0.5em; 
+}
+
+/* Estilos do Formulário de Contato (form) */
 form {
-    display: flex; /* Usa Flexbox para organizar os elementos do formulário */
-    flex-direction: column; /* Organiza os elementos em coluna */
-    gap: 1rem; /* Espaçamento entre os elementos do formulário */
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+    max-width: 500px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
 }
 
+/* Estilo dos rótulos (labels) dos campos do formulário */
 form label {
-    font-weight: bold; /* Rótulo em negrito */
-    margin-bottom: -0.5rem; /* Ajuste para aproximar do input */
+    font-weight: bold; 
+    margin-bottom: 0.2rem; 
+    display: block; 
+    color: #0074D9; /* Azul médio para os rótulos do formulário */
 }
 
+/* Estilo dos campos de entrada de texto e e-mail e área de texto */
 form input[type="text"],
 form input[type="email"],
 form textarea {
-    width: 100%; /* Largura total */
-    padding: 0.8rem; /* Espaçamento interno */
-    border: 1px solid #ccc; /* Borda suave */
-    border-radius: 4px; /* Cantos arredondados */
-    font-size: 1rem; /* Tamanho da fonte */
+    width: 100%; 
+    padding: 0.8rem; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 1rem; 
 }
 
+/* Permite redimensionar a área de texto apenas verticalmente */
 form textarea {
-    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    resize: vertical; 
+    min-height: 100px; 
 }
 
+/* Estilo do Botão de Envio do Formulário */
 form button {
-    background-color: #007bff; /* Cor de fundo do botão (azul) */
-    color: #fff; /* Texto branco */
-    padding: 0.8rem 1.5rem; /* Espaçamento interno */
-    border: none; /* Remove a borda */
-    border-radius: 4px; /* Cantos arredondados */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    font-size: 1.1rem; /* Tamanho da fonte do botão */
-    transition: background-color 0.3s ease; /* Transição suave */
-    align-self: flex-start; /* Alinha o botão à esquerda se o flex-direction for column */
+    background-color: #0074D9; /* Azul médio para o botão de envio */
+    color: #fff; 
+    padding: 0.8rem 1.5rem; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease; 
+    align-self: flex-start; 
 }
 
+/* Efeito de interação (hover) no botão */
 form button:hover {
-    background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse */
+    background-color: #0056b3; 
 }
 
 /* Rodapé */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem; /* Espaçamento superior */
-    font-size: 0.9rem;
+    background-color: #001F3F; /* Azul escuro profundo para o rodapé */
+    color: #fff; 
+    text-align: center; 
+    padding: 1rem 0; 
+    margin-top: 2rem; 
+    font-size: 0.9rem; 
 }
 
-/* style.css */
+/* Media Queries para Responsividade Básica (Aula 4) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem; 
+    }
 
-/* Cabeçalho */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    nav ul {
+        flex-direction: column; 
+        margin-top: 10px; 
+    }
 
-    /* PROPRIEDADES PARA O CABEÇALHO FIXO */
-    position: fixed; /* Fixa o elemento na posição especificada em relação à viewport */
-    width: 100%;     /* Garante que o cabeçalho ocupe toda a largura da tela */
-    top: 0;          /* Alinha o cabeçalho ao topo da tela */
-    left: 0;         /* Alinha o cabeçalho à esquerda da tela */
-    z-index: 1000;   /* Garante que o cabeçalho fique acima de outros conteúdos ao rolar */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adiciona uma sombra sutil para dar profundidade */
-}
+    nav ul li {
+        margin: 5px 0; 
+    }
 
-/* style.css */
+    main {
+        margin: 10px auto; 
+        padding: 0 10px; 
+    }
 
-/* Estilos gerais para o corpo do documento */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    padding-top: 80px; /* Adicione este padding-top para compensar o cabeçalho fixo */
-    /* Ajuste este valor (80px) se o seu cabeçalho for mais alto ou mais baixo */
-}
+    section {
+        padding: 20px; 
+    }
 
+    section h2 {
+        font-size: 1.6rem; 
+    }
 
-/* style.css */
+    p {
+        font-size: 1rem; 
+    }
 
-/* Adicione esta regra no início ou em algum lugar lógico no seu CSS */
-html {
-    scroll-behavior: smooth; /* Opcional: Adiciona uma rolagem suave ao clicar em links âncora */
-    scroll-padding-top: 80px; /* IMPORTANTE: Adiciona um "padding" ao topo da rolagem */
-    /* Este valor (80px) deve ser igual ou um pouco maior que a altura do seu cabeçalho fixo */
-}
+    .item-do-projeto {
+        padding: 15px; 
+    }
 
-.projeto-item {
-    background-color: #f0f4f7; /* Um cinza claro para o fundo do item */
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 6px;
-    border-left: 5px solid #007bff; /* Uma linha azul na esquerda para destaque */
-}
-.projeto-item h3 {
-    color: #0056b3; /* Cor do título do projeto */
-    margin-top: 0;
-    margin-bottom: 0.8rem;
-}
-.projeto-item p {
-    margin-bottom: 0.5em; /* Espaçamento menor entre parágrafos dentro do item */
-}
-.projeto-item a {
-    color: #007bff; /* Azul para o link do projeto */
-    text-decoration: none;
-    font-weight: 600;
-}
-.projeto-item a:hover {
-    text-decoration: underline;
+    form {
+        padding: 15px; 
+    }
 }
 
-.projeto-item {
-    background-color: #f0f4f7; /* Um cinza claro para o fundo do item */
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: 6px;
-    border-left: 5px solid #007bff; /* Uma linha azul na esquerda para destaque */
-}
-.projeto-item h3 {
-    color: #0056b3; /* Cor do título do projeto */
-    margin-top: 0;
-    margin-bottom: 0.8rem;
-}
-.projeto-item p {
-    margin-bottom: 0.5em; /* Espaçamento menor entre parágrafos dentro do item */
-}
-.projeto-item a {
-    color: #007bff; /* Azul para o link do projeto */
-    text-decoration: none;
-    font-weight: 600;
-}
-.projeto-item a:hover {
-    text-decoration: underline;
-}
+/* Estilos aplicados quando a largura da tela é no máximo 480px (smartphones muito pequenos) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem; 
+    }
 
-p {
-    font-size: 1.05rem; /* Ou o tamanho que você definiu */
-    margin-bottom: 1em; /* Essa linha controla o espaço abaixo de cada parágrafo */
+    section h2 {
+        font-size: 1.5rem; 
+    }
+
+    form button {
+        padding: 0.6rem 1rem; 
+        font-size: 1rem; 
+    }
 }
